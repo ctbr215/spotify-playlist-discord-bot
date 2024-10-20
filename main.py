@@ -4,7 +4,6 @@ from discord import app_commands
 import random
 
 intents = discord.Intents.all()
-intents.typing = False
 bot = commands.Bot(command_prefix="_", intents=intents, help_command=None, owner_ids=[])
 
 def random_embed_color():
