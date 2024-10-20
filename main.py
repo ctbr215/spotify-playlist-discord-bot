@@ -7,7 +7,7 @@ import random
 
 intents = discord.Intents.all()
 intents.typing = False
-bot = commands.Bot(command_prefix="_", intents=intents, help_command=None, owner_ids=[1279323365454385175])
+bot = commands.Bot(command_prefix="_", intents=intents, help_command=None, owner_ids=[])
 
 def random_embed_color():
     return discord.Color(random.randint(0, 0xFFFFFF))
