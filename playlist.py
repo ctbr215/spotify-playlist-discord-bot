@@ -1,7 +1,6 @@
 import re
 import discord
 from discord.ext import commands
-from youtubesearchpython import Video
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 
