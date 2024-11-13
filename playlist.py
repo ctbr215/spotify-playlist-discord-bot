@@ -15,8 +15,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIPY_CLIENT_ID,
                                                scope="user-modify-playback-state user-read-playback-state playlist-modify-public"))
 def get_youtube_title(url):
     try:
-        video_info = Video.getInfo(url)
-        return video_info['title']
+       res=requests.get(url)
+       return BeautifulSoup(res.text,'html.parser').find('meta',property='og:title')['content']
     except Exception as e:
         return None
 class LinkHandler(commands.Cog):
